@@ -22,18 +22,18 @@ export default function Portfolio() {
       {currentView === "main" && (
         <div id="main-page" className="main-content">
           <header>
-            <h1>Alex Chen</h1>
-            <p className="subtitle">Computer Science Student | Third Year | Aspiring Software Engineer</p>
+            <h1>Kathleen Chen</h1>
+            <p className="subtitle">Computer Science Student | Third Year | Computer Science and Information Technology</p>
             <div className="contact-links">
               <a href="mailto:katechen8686@gmail.com">📧 Email</a>
               <a href="https://github.com/B1229013" target="_blank" rel="noreferrer">
-                💻 GitHub
+                GitHub
               </a>
               <a href="https://www.linkedin.com/in/kathleen-chen-452467392/" target="_blank" rel="noreferrer">
-                💼 LinkedIn
+                LinkedIn
               </a>
-              <a href="resume.pdf" target="_blank" rel="noreferrer">
-                📄 Resume
+              <a href="Undergrad-Resume.pdf" target="_blank" rel="noreferrer">
+                Resume
               </a>
             </div>
           </header>
@@ -75,20 +75,14 @@ export default function Portfolio() {
                 <ul>
                   <li>React</li>
                   <li>Node.js</li>
-                  <li>Express</li>
                   <li>Django</li>
-                  <li>Flask</li>
-                  <li>Spring Boot</li>
                 </ul>
               </div>
               <div className="skill-category">
                 <h3>Tools & Technologies</h3>
                 <ul>
                   <li>Git & GitHub</li>
-                  <li>Docker</li>
-                  <li>AWS</li>
-                  <li>MongoDB</li>
-                  <li>PostgreSQL</li>
+                  <li>MySQL</li>
                   <li>REST APIs</li>
                 </ul>
               </div>
@@ -97,10 +91,6 @@ export default function Portfolio() {
                 <ul>
                   <li>Data Structures</li>
                   <li>Algorithms</li>
-                  <li>OOP</li>
-                  <li>Machine Learning</li>
-                  <li>Agile/Scrum</li>
-                  <li>CI/CD</li>
                 </ul>
               </div>
             </div>
