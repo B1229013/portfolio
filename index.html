@@ -1,15 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Your Name | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathleen Chen | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, I’m Alex 👋</h1>
-  <p>This is my portfolio website.</p>
+    <div class="container">
+        <div id="main-view" class="view-section active">
+            <header>
+                <h1>Kathleen Chen</h1>
+                <p class="subtitle">Computer Science Student | Third Year | Computer Science and Information Technology</p>
+                <div class="contact-links">
+                    <a href="mailto:katechen8686@gmail.com">📧 Email</a>
+                    <a href="https://github.com/B1229013" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/kathleen-chen-452467392/" target="_blank">LinkedIn</a>
+                    <a href="Undergrad-Resume.pdf" target="_blank">Resume</a>
+                </div>
+            </header>
 
-  <a href="resume.pdf" target="_blank">Download Resume</a>
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hello! I'm a passionate third-year Computer Science student with a strong foundation in software development and a keen interest in full-stack development, AI, and cloud technologies.</p>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-card" onclick="showProject('taskflow-view')">
+                    <h3>TaskFlow</h3>
+                    <p>Built a full-stack web application that enables teams to manage projects and track progress in real-time.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <span class="view-details">View Details →</span>
+                </div>
+
+                <div class="project-card" onclick="showProject('ai-recommend-view')">
+                    <h3>AI-RecommendEngine</h3>
+                    <p>Created a machine learning model that recommends movies with 85% accuracy.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <span class="view-details">View Details →</span>
+                </div>
+
+                <div class="project-card" onclick="showProject('expense-tracker-view')">
+                    <h3>CloudExpenseTracker</h3>
+                    <p>Designed and deployed a serverless expense tracking application with OCR technology.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">DynamoDB</span>
+                    </div>
+                    <span class="view-details">View Details →</span>
+                </div>
+            </section>
+
+            <footer>
+                <p>Let's build something amazing together!</p>
+                <p>© 2025 Alex Chen. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <div id="taskflow-view" class="view-section">
+            <span class="back-button" onclick="showMain()">Back to Portfolio</span>
+            <div class="project-header">
+                <h1>TaskFlow</h1>
+                <p class="project-subtitle">Real-time collaborative project management</p>
+            </div>
+            <section>
+                <h3>Project Overview</h3>
+                <p>TaskFlow handles multiple concurrent users with instant synchronization using Socket.io.</p>
+            </section>
+        </div>
+
+        <div id="ai-recommend-view" class="view-section">
+            <span class="back-button" onclick="showMain()">Back to Portfolio</span>
+            <div class="project-header">
+                <h1>AI-RecommendEngine</h1>
+                <p class="project-subtitle">ML-powered movie recommendations</p>
+            </div>
+            <section>
+                <h3>Technical Implementation</h3>
+                <p>Built using Python, Pandas, and Scikit-learn using collaborative filtering.</p>
+            </section>
+        </div>
+
+        <div id="expense-tracker-view" class="view-section">
+            <span class="back-button" onclick="showMain()">Back to Portfolio</span>
+            <div class="project-header">
+                <h1>CloudExpenseTracker</h1>
+                <p class="project-subtitle">Serverless AWS Application</p>
+            </div>
+            <section>
+                <h3>Cloud Architecture</h3>
+                <p>Uses AWS Lambda, S3, and Rekognition for automated receipt scanning.</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function showProject(viewId) {
+            // Hide all views
+            document.querySelectorAll('.view-section').forEach(view => {
+                view.classList.remove('active');
+            });
+            // Show selected view
+            document.getElementById(viewId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showMain() {
+            showProject('main-view');
+        }
+    </script>
 </body>
 </html>
