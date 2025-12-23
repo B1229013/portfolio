@@ -1,10 +1,142 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
-  padding: 40px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #4da3ff;
+body {
+  font-family: "Courier New", monospace;
+  background: #fff5e6;
+  color: #2c1810;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Visibility Logic */
+.view-section {
+  display: none;
+}
+
+.view-section.active {
+  display: block;
+}
+
+header {
+  background: #c41e3a;
+  padding: 80px 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 4px solid #8b0000;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #fff5e6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h1::before {
+  content: "> ";
+  color: #ffd700;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #ffe4c4;
+  margin-bottom: 20px;
+}
+
+.subtitle::before {
+  content: "// ";
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  padding: 12px 25px;
+  background: #8b0000;
+  color: #fff5e6;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #fff5e6;
+  transition: all 0.3s;
+}
+
+.contact-links a:hover {
+  background: #fff5e6;
+  color: #8b0000;
+  transform: translateY(-2px);
+}
+
+section {
+  background: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-left: 6px solid #c41e3a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #c41e3a;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #8b0000;
+}
+
+h2::before {
+  content: "# ";
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border: 2px solid #c41e3a;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #fff5e6;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.tech-tag {
+  background: #c41e3a;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.8em;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #c41e3a;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #8b0000;
 }
