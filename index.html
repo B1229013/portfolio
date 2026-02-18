@@ -3,120 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kathleen Chen | Portfolio</title>
+    <title>Kathleen Chen | CSIE Student</title>
+    <meta name="description" content="Portfolio of Kathleen Chen, CSIE student at Chang Gung University. Seeking internship opportunities in software development and web development.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div id="main-view" class="view-section active">
-            <header>
-                <h1>Kathleen Chen</h1>
-                <p class="subtitle">Computer Science Student | Third Year | Computer Science and Information Technology</p>
-                <div class="contact-links">
-                    <a href="mailto:katechen8686@gmail.com">📧 Email</a>
-                    <a href="https://github.com/B1229013" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/kathleen-chen-452467392/" target="_blank">LinkedIn</a>
-                    <a href="Undergrad-Resume.pdf" target="_blank">Resume</a>
-                </div>
-            </header>
-
-            <section id="about">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <p>Hello! I'm a passionate third-year Computer Science student with a strong foundation in software development and a keen interest in full-stack development, AI, and cloud technologies.</p>
-                </div>
-            </section>
-
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="project-card" onclick="showProject('taskflow-view')">
-                    <h3>TaskFlow</h3>
-                    <p>Built a full-stack web application that enables teams to manage projects and track progress in real-time.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                    </div>
-                    <span class="view-details">View Details →</span>
-                </div>
-
-                <div class="project-card" onclick="showProject('ai-recommend-view')">
-                    <h3>AI-RecommendEngine</h3>
-                    <p>Created a machine learning model that recommends movies with 85% accuracy.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                    </div>
-                    <span class="view-details">View Details →</span>
-                </div>
-
-                <div class="project-card" onclick="showProject('expense-tracker-view')">
-                    <h3>CloudExpenseTracker</h3>
-                    <p>Designed and deployed a serverless expense tracking application with OCR technology.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">AWS Lambda</span>
-                        <span class="tech-tag">DynamoDB</span>
-                    </div>
-                    <span class="view-details">View Details →</span>
-                </div>
-            </section>
-
-            <footer>
-                <p>Let's build something amazing together!</p>
-                <p>© 2025 Alex Chen. All rights reserved.</p>
-            </footer>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Kathleen Chen</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div id="taskflow-view" class="view-section">
-            <span class="back-button" onclick="showMain()">Back to Portfolio</span>
-            <div class="project-header">
-                <h1>TaskFlow</h1>
-                <p class="project-subtitle">Real-time collaborative project management</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image-wrapper">
+                    <span class="profile-initials">KC</span>
+                </div>
+                <h1 class="hero-title">Kathleen Chen</h1>
+                <h2 class="hero-subtitle">Third Year CSIE Student</h2>
+                <p class="hero-description">
+                    I am a third-year Bachelor's student in Computer Science at Chang Gung University and an Overseas Chinese student with a strong passion for learning and self-improvement. I am seeking internship opportunities that combine technology with management or business, where I can apply my technical foundation while gaining real-world industry experience. I am eager to learn from hands-on projects, contribute my analytical thinking and problem-solving skills, and grow in a professional working environment.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#" class="btn btn-secondary">
+                        Download Resume
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/B1229013" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kathleen-chen-452467392/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:katechen8686@gmail.com" class="social-link" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <section>
-                <h3>Project Overview</h3>
-                <p>TaskFlow handles multiple concurrent users with instant synchronization using Socket.io.</p>
-            </section>
         </div>
+    </section>
 
-        <div id="ai-recommend-view" class="view-section">
-            <span class="back-button" onclick="showMain()">Back to Portfolio</span>
-            <div class="project-header">
-                <h1>AI-RecommendEngine</h1>
-                <p class="project-subtitle">ML-powered movie recommendations</p>
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="grid-2col">
+                <div class="about-text">
+                    <p class="text-lg">
+                        I am a third-year Bachelor's student in Computer Science at Chang Gung University and an Overseas Chinese student with a strong passion for learning and growth.
+                    </p>
+                    <p class="text-lg">
+                        I am a fast learner with strong analytical and problem-solving skills, and I value learning through real-world projects and teamwork.
+                    </p>
+                    <p class="text-lg">
+                        I enjoy transforming ideas into practical, functional systems and have a strong interest in full-stack development and system design. I actively explore and learn new technologies beyond academic requirements to continuously improve my skills.
+                    </p>
+                </div>
+                <div class="expertise-box">
+                    <h3 class="expertise-title">Key Expertise</h3>
+                    <ul class="expertise-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Web Development
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Programming &amp; Technical Skills
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Backend &amp; Database Basics
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Tools &amp; Development Workflow
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            <details style="display:inline;">
+                                <summary style="list-style: none; cursor: pointer; display: inline;">
+                                    Language Skills: English, Chinese, Indonesian (Click To Expand)
+                                </summary>
+                                <div style="margin-left: 20px; margin-top: 6px;">
+                                    <div>English &mdash; British Council Score: 543, C1 (Native)</div>
+                                    <div>Indonesian &mdash; Native</div>
+                                    <div>Chinese &mdash; TOCFL Band B (102)</div>
+                                </div>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <section>
-                <h3>Technical Implementation</h3>
-                <p>Built using Python, Pandas, and Scikit-learn using collaborative filtering.</p>
-            </section>
         </div>
+    </section>
 
-        <div id="expense-tracker-view" class="view-section">
-            <span class="back-button" onclick="showMain()">Back to Portfolio</span>
-            <div class="project-header">
-                <h1>CloudExpenseTracker</h1>
-                <p class="project-subtitle">Serverless AWS Application</p>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+
+                <!-- 3Zebra Internship (NEW) -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Software Development Intern</h3>
+                            <p class="experience-company">
+                                <a href="https://www.3zebra.com.tw" target="_blank" rel="noopener noreferrer">
+                                    3Zebra
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </p>
+                        </div>
+                        <p class="experience-date">2025</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Developed internal tools and small programs to support various departments across the company, improving operational efficiency.</li>
+                        <li>Built a web scraper to automate data collection from various online sources for market research and product analysis.</li>
+                        <li>Created a Profit Navigator tool to help the finance team track, analyze, and visualize profitability metrics across product lines.</li>
+                        <li>Developed an Advertisement AI Producer to assist the marketing team in generating and optimizing ad content using AI technologies.</li>
+                        <li>Collaborated with cross-functional teams to identify pain points and deliver tailored software solutions for daily business operations.</li>
+                    </ul>
+                </div>
+
+                <!-- Computer Repair Technician -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Computer Repair Technician</h3>
+                            <p class="experience-company">Chang Gung University</p>
+                        </div>
+                        <p class="experience-date">Feb 2025 - Present</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Working as a computer repair apprentice, assisting with diagnostics, hardware troubleshooting, OS installation, and system maintenance.</li>
+                        <li>Learning through hands-on tasks while supporting students and faculty with technical issues.</li>
+                        <li>Gaining practical experience in IT support and device repair.</li>
+                    </ul>
+                </div>
+
+                <!-- Translator -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Translator</h3>
+                            <p class="experience-company">Freelance</p>
+                        </div>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Provide clear and accurate translation support for Indonesian-speaking users who are unable to communicate in Chinese or English.</li>
+                        <li>Facilitate communication between Indonesian clients and Chinese/English users in daily conversations, academic tasks, and real-world situations.</li>
+                    </ul>
+                </div>
+
             </div>
-            <section>
-                <h3>Cloud Architecture</h3>
-                <p>Uses AWS Lambda, S3, and Rekognition for automated receipt scanning.</p>
-            </section>
         </div>
-    </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-color-bar"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coffee Web Platform</h3>
+                        <p class="project-description">Developed a multi-brand e-commerce platform.</p>
+                        <p class="project-details">Implemented dynamic search, filtering, and interactive UI for enhanced user experience. Integrated front-end and back-end for seamless product management and display.</p>
+                        <div class="project-tags">
+                            <span class="badge">HTML5</span>
+                            <span class="badge">JavaScript (Vanilla JS)</span>
+                            <span class="badge">React</span>
+                            <span class="badge">Next.js</span>
+                            <span class="badge">TypeScript</span>
+                            <span class="badge">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-color-bar"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Book Rental System</h3>
+                        <p class="project-description">Built a Django backend with RESTful API endpoints for books, borrow/return, and user management.</p>
+                        <p class="project-details">Implemented token-based authentication and dynamic React frontend for user interaction. Improved usability for library staff and students by automating rental processes.</p>
+                        <div class="project-tags">
+                            <span class="badge">React</span>
+                            <span class="badge">Django, Django REST Framework</span>
+                            <span class="badge">RESTful API</span>
+                            <span class="badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-color-bar"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Online Movie Ticket Ordering System</h3>
+                        <p class="project-description">Designed and developed a mock online movie ticket ordering website that simulates a real-world cinema booking platform.</p>
+                        <p class="project-details">The project focuses on front-end structure, user flow, and UI/UX design, including movie browsing, ticket booking, and member features. Built with React and Next.js using modular components and a responsive layout.</p>
+                        <div class="project-tags">
+                            <span class="badge">React</span>
+                            <span class="badge">Next.js</span>
+                            <span class="badge">PHP</span>
+                            <span class="badge">JavaScript / TypeScript</span>
+                            <span class="badge">HTML / CSS</span>
+                            <span class="badge">Responsive Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-header"><h3>Web Development</h3></div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Responsive Web Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header"><h3>Programming</h3></div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Basic data structures and algorithms</span>
+                        <span class="skill-tag">C++ / C</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header"><h3>Backend &amp; Database (Basic)</h3></div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Django / ASP.NET fundamentals</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">MySQL / MSSQL</span>
+                        <span class="skill-tag">Jupyter Notebooks</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header"><h3>Operating Systems</h3></div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux (Ubuntu)</span>
+                        <span class="skill-tag">Basic system configuration</span>
+                        <span class="skill-tag">Command-line usage</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header"><h3>Computer Hardware &amp; Maintenance</h3></div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PC assembly</span>
+                        <span class="skill-tag">Hardware troubleshooting</span>
+                        <span class="skill-tag">System repair</span>
+                        <span class="skill-tag">OS installation</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header"><h3>Tools &amp; Workflow</h3></div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Debugging</span>
+                        <span class="skill-tag">Development environments</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+
+                <!-- LEFT: Contact Info -->
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    <div class="contact-links">
+                        <a href="mailto:katechen8686@gmail.com" class="contact-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            katechen8686@gmail.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/kathleen-chen-452467392" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/B1229013" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            GitHub Profile
+                        </a>
+                    </div>
+                    <p class="contact-message">
+                        I am actively seeking internship opportunities and eager to learn, grow, and take on new challenges in a professional environment.
+                    </p>
+                </div>
+
+                <!-- RIGHT: Call to Action -->
+                <div class="contact-cta">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I am open to internship opportunities in software development, web development, and roles that combine technology with business or management.
+                    </p>
+                    <ul class="availability-list">
+                        <li>Available for internships</li>
+                        <li>Open to part-time / project-based roles</li>
+                        <li>Willing to learn new technologies</li>
+                    </ul>
+                    <a href="mailto:katechen8686@gmail.com" class="btn btn-primary">Email Me</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Kathleen Chen. All rights reserved.</p>
+    </footer>
 
     <script>
-        function showProject(viewId) {
-            // Hide all views
-            document.querySelectorAll('.view-section').forEach(view => {
-                view.classList.remove('active');
-            });
-            // Show selected view
-            document.getElementById(viewId).classList.add('active');
-            window.scrollTo(0, 0);
-        }
+        // Navbar scroll shadow
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-        function showMain() {
-            showProject('main-view');
-        }
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.project-card, .experience-card, .skill-card').forEach(el => {
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>
