@@ -159,12 +159,12 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
   background-color: var(--bg-tertiary);
 }
 
-.profile-initials {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--accent-primary);
-  user-select: none;
-}
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  }
 
 .hero-title {
   font-size: clamp(2rem, 6vw, 3rem);
